@@ -11,7 +11,6 @@ class StringOpenation {
     val reverseString = { t: String -> t.reversed()}
 
 
-
     fun <T> transform(input: T,fn : (T) -> T) :T {
         return fn(input)
     }
@@ -24,8 +23,12 @@ object MyUtils {
 
 class Transformer {
     fun upperCased(str: String): String {
-        return str.toUpperCase() }
+        return str.toUpperCase()
+    }
+
     companion object {
         fun lowerCased(str: String): String {
-            return str.toLowerCase() }
-    } }
+            return str.toLowerCase()
+        }
+    }
+}

@@ -13,7 +13,7 @@ class StringOperationTest {
 
     @Test
     fun `upper case "Hello" string using operateString function` () {
-        val result = StringOpenation().operateString("hello",{it.toUpperCase()})
+        val result = StringOpenation().operateString("hello"){it.toUpperCase()}
         assertEquals("HELLO",result)
 
     }
