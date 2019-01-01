@@ -2,10 +2,11 @@
   #### First-class functions
   Kotlin functions are first-class citizens, which means they can be stored in variables and data structures, passed as arguments to
   and returned from other functions
+  The advantages of first-order functions are, when we want to write a function that can work for many scenarios.
   #### Higher-order-function
   A higher order function is a function that either accepts another function as a parameter or returns a function as its return value, or 
-  both.
-  Lets take example
+  both.Lets take example
+    
      ```
        fun stringOperation(str: String, fn: (String) -> String): Unit {
          val applied = fn(str)
@@ -18,6 +19,11 @@
       string as the output). Also note the syntax we used to define the function parameter. 
         - The input types are wrapped in parentheses (String)
         - The output type is separated by a thin arrow.
+   - If a function receives a lambda as the last parameter, the lambda can be passed outside the parentheses:
+     ```
+     stringOperation("Hello World"){ str -> str.substring(0..1) }
+     
+     ```
       
   
   
