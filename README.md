@@ -1,5 +1,12 @@
 # kotlin-high-order-function (Functional Programing:)
+  #### First-class functions
+  Kotlin functions are first-class citizens, which means they can be stored in variables and data structures, passed as arguments to
+  and returned from other functions
+  #### Higher-order-function
+  A higher order function is a function that either accepts another function as a parameter or returns a function as its return value, or 
+  both.
 
+---------------------------------
 ## Developers: Getting Started
 
 ```sh
