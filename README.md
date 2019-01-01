@@ -5,7 +5,22 @@
   #### Higher-order-function
   A higher order function is a function that either accepts another function as a parameter or returns a function as its return value, or 
   both.
-
+  Lets take example
+     ```
+       fun stringOperation(str: String, fn: (String) -> String): Unit {
+         val applied = fn(str)
+         println(applied)
+      }
+    ```
+   -  we have defined a function stringOperation with two parameters,
+      - The first parameter is str which is of string type, 
+      - Second is a function fn from string to string (it means, second parameter is function accepts a string input and returns another 
+      string as the output). Also note the syntax we used to define the function parameter. 
+        - The input types are wrapped in parentheses (String)
+        - The output type is separated by a thin arrow.
+      
+  
+  
 ---------------------------------
 ## Developers: Getting Started
 
