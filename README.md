@@ -1,9 +1,15 @@
 # kotlin-high-order-function (Functional Programing:)
-In Kotlin, functions are first-class citizen. It means that functions can be assigned to the variables, passed as an arguments or returned from another function. While Kotlin is statically typed, to make it possible, functions need to have a type. It exists and it is called function type
-  - ```()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
-  - ```(Int)->Int``` :the function type that returns Int and takes single argument of type Int.
-  - ```()->()->Unit``` : the function type that returns another function that returns nothing useful (Unit). Both functions take no 
-  arguments.
+In Kotlin, functions are first-class citizen. It means that functions can be assigned to the variables, passed as an arguments or returned from another function. 
+  #### Function type
+  - While Kotlin is statically typed, to make it possible, functions need to have a type. It exists and it is called function type
+    - ```()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
+    - ```(Int)->Int``` :the function type that returns Int and takes single argument of type Int.
+    - ```()->()->Unit``` : the function type that returns another function that returns nothing useful (Unit). Both functions take no 
+    arguments.
+  - We can also use them to type local variables, properties or arguments:
+    - ```val greet: ()->Unit```
+    - ```val square: (Int)->Int```
+    - ```val producePrinter: ()->()->Unit```
 
   #### First-class functions
   Kotlin functions are first-class citizens, which means they can be stored in variables and data structures, passed as arguments to
