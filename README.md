@@ -40,6 +40,12 @@ In Kotlin, functions are first-class citizen. It means that functions can be ass
      ```
    - Example for Sting operation is [here](https://github.com/AnerayeVijay/kotlin-higher-order-function/blob/master/src/test/kotlin/com/vijayaneraye/string/StringOperationTest.kt)
   
+## Type Alias 
+ - Type alias allow us to declare alternative type that is simply alias of an existing type
+ - Type alias provides a way to define names of types that already exist. Type alias can help to make complex types easier to read, and
+   can also provide other hints.
+ - Instead of typing the function type every time when defining a property, we can use typealias as shown below.
+
   
 ---------------------------------
 ## Developers: Getting Started
