@@ -24,7 +24,7 @@
      stringOperation("Hello World"){ str -> str.substring(0..1) }
      
      ```
-      
+   - Example for Sting operation is [here](https://github.com/AnerayeVijay/kotlin-higher-order-function/blob/master/src/test/kotlin/com/vijayaneraye/string/StringOperationTest.kt)
   
   
 ---------------------------------
