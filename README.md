@@ -1,5 +1,18 @@
 # kotlin-high-order-function (Functional Programing:)
-In Kotlin, functions are first-class citizen. It means that functions can be assigned to the variables, passed as an arguments or returned from another function. 
+- In Kotlin, functions are first-class citizen. It means that functions can be assigned to the variables, passed as an arguments or 
+  returned from another function. 
+- Before we jupped into higher order function, we can have quick description on  functions in Kotlin.
+- Function : A function is a group of related statements that perform a specific task.
+- In Kotlin, a function generally looks like the following:
+```
+  fun functionName(parameter1:DataType1, parameter2:DataType2,...): ReturnType { 
+      //do your stuff here
+      return value/object
+  }
+```
+  #### Extension functions
+  Extension functions are like an ad hoc function on top of an existing datatype/class.
+  
   #### Function type
   - While Kotlin is statically typed, to make it possible, functions need to have a type. It exists and it is called function type
     - ```()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
@@ -10,7 +23,12 @@ In Kotlin, functions are first-class citizen. It means that functions can be ass
     - ```val greet: ()->Unit```
     - ```val square: (Int)->Int```
     - ```val producePrinter: ()->()->Unit```
-
+  #### Function literal
+  function literal is a special notation used to simplify how a function is defined.There are two types of function literals in Kotlin:
+    - Lambda expression
+    - Anonymous function
+    
+ ---------------------------------------------------
   #### First-class functions
   Kotlin functions are first-class citizens, which means they can be stored in variables and data structures, passed as arguments to
   and returned from other functions
@@ -40,11 +58,19 @@ In Kotlin, functions are first-class citizen. It means that functions can be ass
      ```
    - Example for Sting operation is [here](https://github.com/AnerayeVijay/kotlin-higher-order-function/blob/master/src/test/kotlin/com/vijayaneraye/string/StringOperationTest.kt)
   
+
+    
 ## Type Alias 
  - Type alias allow us to declare alternative type that is simply alias of an existing type
  - Type alias provides a way to define names of types that already exist. Type alias can help to make complex types easier to read, and
    can also provide other hints.
  - Instead of typing the function type every time when defining a property, we can use typealias as shown below.
+ - Type aliases allow developers to define synonyms for pre-existing types.
+ - You can use typealias for most any type: classes, enums, structs, tuples, closures, etc. Here are a few examples.
+    - typealias Name = String
+    - typealias Employees = Array<Employee>
+    - typealias GridPoint = (Int, Int)
+    - typealias CompletionHandler = (ErrorType?) -> Void
 
   
 ---------------------------------
