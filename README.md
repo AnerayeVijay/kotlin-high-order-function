@@ -3,21 +3,22 @@
   returned from another function. 
 - Before we jupped into higher order function, we can have quick description on  functions in Kotlin.
   #### Function 
-  -  A function is a group of related statements that perform a specific task.
+  - A function is a group of related statements that perform a specific task.
   - In Kotlin, a function generally looks like the following:
 ```
-fun functionName(parameter1:DataType1, parameter2:DataType2,...): ReturnType { 
-    //do your stuff here
-    return value/object
-}
+  fun functionName(parameter1:DataType1, parameter2:DataType2,...): ReturnType { 
+      //do your stuff here
+      return value/object
+  }
 ```
   #### Extension functions
   - Extension functions are like an ad hoc function on top of an existing datatype/class.
-      ```
-        fun String.countWords():Int { 
-             return trim()..size
-        }
-      ```
+  ```
+    fun String.countWords():Int { 
+         return trim()..size
+    }
+  ```
+
    - We declared the function as String.countWords(),that means it should be called on a String instance now
    
   #### Function type
