@@ -8,4 +8,6 @@ class StringCalculator {
         return intValues.filter { it !=10 }.fold(0) { acc, number -> acc + number}
     }
 
+
+
 }

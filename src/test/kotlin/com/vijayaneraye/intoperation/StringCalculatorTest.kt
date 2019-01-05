@@ -3,7 +3,7 @@ package com.vijayaneraye.intoperation
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-class IntCalculatorTest {
+class StringCalculatorTest {
 
     @Test
     fun `return same value for single  1` () {
