@@ -5,7 +5,7 @@
  #### Function 
   - A function is a group of related statements that perform a specific task.
   - In Kotlin, a function generally looks like the following:
-```
+```kotlin
   fun functionName(parameter1:DataType1, parameter2:DataType2,...): ReturnType { 
       //do your stuff here
       return value/object
@@ -13,17 +13,17 @@
 ```
   #### Extension functions
   - Extension functions are like an ad hoc function on top of an existing datatype/class.
-  ```
+  ```kotlin
     fun String.countWords():Int { 
          return trim()..size
     }
   ```
 
-   - We declared the function as String.countWords(),that means it should be called on a String instance now
+  - We declared the function as String.countWords(),that means it should be called on a String instance now
    
   #### Function type
-  -  In Kotlin, you can store Lambda in a variable,to make it possible, variable need to have a type
-  -  If we specify this type explicitly,we'll see a so-called function type.
+    -  In Kotlin, you can store Lambda in a variable,to make it possible, variable need to have a type
+    -  If we specify this type explicitly,we'll see a so-called function type.
   - While Kotlin is statically typed, to make it possible, functions need to have a type. It exists and it is called function type
     - ``` ()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
     - ```(Int)->Int``` :the function type that returns Int and takes single argument of type Int.
@@ -37,8 +37,14 @@
 ```kotlin
  val sum : (Int,Int) -> Int = { a, b -> a + b}
 ```
-
-  - We can also use them to type local variables, properties or arguments:
+- In above example this is function type takes two integer parameters and returns an integer as a result
+##### Calling stored function
+  - You can call a variable a function type as a regular function by providing all the necessary arguments
+    ```kotlin
+    val add : (Int,Int) -> Int = { a, b -> a + b}
+    val result: Int = add (1,2)
+    ```
+- We can also use them to type local variables, properties or arguments:
     - ```val greet: ()->Unit```
     - ```val square: (Int)->Int```
     - ```val producePrinter: ()->()->Unit```
