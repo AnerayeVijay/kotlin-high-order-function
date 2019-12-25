@@ -1,4 +1,4 @@
-# function in Kotlin (Functional Programing:)
+# Functions in Kotlin (Functional Programing:)
 - In Kotlin, functions are first-class citizen. It means that functions can be assigned to the variables, passed as an arguments or 
   returned from another function. 
 - Before we jupped into higher order function, we can have quick description on  functions in Kotlin.
