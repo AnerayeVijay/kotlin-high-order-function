@@ -1,8 +1,8 @@
-# kotlin-high-order-function (Functional Programing:)
+# function in Kotlin (Functional Programing:)
 - In Kotlin, functions are first-class citizen. It means that functions can be assigned to the variables, passed as an arguments or 
   returned from another function. 
 - Before we jupped into higher order function, we can have quick description on  functions in Kotlin.
-  #### Function 
+ #### Function 
   - A function is a group of related statements that perform a specific task.
   - In Kotlin, a function generally looks like the following:
 ```
@@ -22,11 +22,22 @@
    - We declared the function as String.countWords(),that means it should be called on a String instance now
    
   #### Function type
+  -  In Kotlin, you can store Lambda in a variable,to make it possible, variable need to have a type
+  -  If we specify this type explicitly,we'll see a so-called function type.
   - While Kotlin is statically typed, to make it possible, functions need to have a type. It exists and it is called function type
-    - ```()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
+    - ``` ()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
     - ```(Int)->Int``` :the function type that returns Int and takes single argument of type Int.
     - ```()->()->Unit``` : the function type that returns another function that returns nothing useful (Unit). Both functions take no 
     arguments.
+    
+  ```kotlin
+     val sum = {a: Int,b: Int -> a + b}
+  ```
+  - If we have to specify type explicitly then code looks like parameter types are written inside the parentheses and then an arrow,then the return type
+```kotlin
+ val sum : (Int,Int) -> Int = { a, b -> a + b}
+```
+
   - We can also use them to type local variables, properties or arguments:
     - ```val greet: ()->Unit```
     - ```val square: (Int)->Int```
