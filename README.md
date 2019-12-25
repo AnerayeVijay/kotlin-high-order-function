@@ -37,15 +37,15 @@
 ```kotlin
  val sum : (Int,Int) -> Int = { a, b -> a + b}
 ```
-- In above example this is function type takes two integer parameters and returns an integer as a result
+- In above example this is function type takes two integer parameters and returns an integer as a resul
 ##### Calling stored function
-   - You can call a variable a function type as a regular function by providing all the necessary arguments
-      ```kotlin
-      val add : (Int,Int) -> Int = { a, b -> a + b}
-      val result: Int = add (1,2)
-      ```
-     -- When you store a Lambda in a variable, you can pass this variable whenever an expression of function type is expected
-for example , for collection 
+     - You can call a variable a function type as a regular function by providing all the necessary arguments
+        ```kotlin
+          val add : (Int,Int) -> Int = { a, b -> a + b}
+          val result: Int = add (1,2)
+       ```
+     - When you store a Lambda in a variable, you can pass this variable whenever an expression of function type is expected
+    for example , for collection 
         ```kotlin
         val list = listOf(1,2,3,4,5,6,7,8,9,10)
 
