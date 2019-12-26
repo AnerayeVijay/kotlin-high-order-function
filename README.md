@@ -24,22 +24,23 @@
   - We declared the function as String.countWords(),that means it should be called on a String instance now
  ---------------------------------------------------  
   #### Function type
-    -  In Kotlin, you can store Lambda in a variable,to make it possible, variable need to have a type
-    -  If we specify this type explicitly,we'll see a so-called function type.
+  -  In Kotlin, you can store Lambda in a variable,to make it possible, variable need to have a type
+  -  If we specify this type explicitly,we'll see a so-called function type.
   - While Kotlin is statically typed, to make it possible, functions need to have a type. It exists and it is called function type
     - ``` ()->Unit``` : the function type that returns nothing useful (Unit) and takes no arguments.
     - ```(Int)->Int``` :the function type that returns Int and takes single argument of type Int.
     - ```()->()->Unit``` : the function type that returns another function that returns nothing useful (Unit). Both functions take no 
     arguments.
     
-  ```kotlin
-     val sum = {a: Int,b: Int -> a + b}
-  ```
-  - If we have to specify type explicitly then code looks like parameter types are written inside the parentheses and then an arrow,then the return type
-```kotlin
- val sum : (Int,Int) -> Int = { a, b -> a + b}
-```
-- In above example this is function type takes two integer parameters and returns an integer as a resul
+      ```kotlin
+           val sum = {a: Int,b: Int -> a + b}
+      ```
+  - If we have to specify type explicitly then code looks like parameter types are written inside the parentheses and then an arrow,then 
+    the return type
+    ```kotlin
+     val sum : (Int,Int) -> Int = { a, b -> a + b}
+    ```
+  - In above example this is function type takes two integer parameters and returns an integer as a resul
 
   ##### Calling stored function
      - You can call a variable a function type as a regular function by providing all the necessary arguments
