@@ -42,14 +42,14 @@
     ```
   - In above example this is function type takes two integer parameters and returns an integer as a resul
 
-  ##### Calling stored function
+    ##### Calling stored function
      - You can call a variable a function type as a regular function by providing all the necessary arguments
           ```kotlin
           val add : (Int,Int) -> Int = { a, b -> a + b}
           val result: Int = add (1,2)
           ```
-     - When you store a Lambda in a variable, you can pass this variable whenever an expression of function type is expected
-    for example , for collection 
+     - When you store a Lambda in a variable, you can pass this variable whenever an expression of function type is expecte for example,
+       for collection 
 
           ```kotlin
           val list = listOf(1,2,3,4,5,6,7,8,9,10)
@@ -59,7 +59,7 @@
           list.any(isEven) //return true
           list.filter(isEven) // returns 2,4,6,8,10
           ```
-   #### Calling Member reference in Function 
+    #### Calling Member reference in Function 
     - The syntax for member reference is the same as in Java
     - In Kotlin you can store Lambda in a variable, however, you can't store a function in a variable. It's not like in a truly functional
       language where each function is a variable.
