@@ -11,6 +11,8 @@
       return value/object
   }
 ```
+ ---------------------------------------------------
+
   #### Extension functions
   - Extension functions are like an ad hoc function on top of an existing datatype/class.
   ```kotlin
@@ -20,7 +22,7 @@
   ```
 
   - We declared the function as String.countWords(),that means it should be called on a String instance now
-   
+ ---------------------------------------------------  
   #### Function type
     -  In Kotlin, you can store Lambda in a variable,to make it possible, variable need to have a type
     -  If we specify this type explicitly,we'll see a so-called function type.
@@ -130,6 +132,8 @@
             fun getAvgPredicate() = ::average
         }
         ```
+ ---------------------------------------------------
+
   #### Function literal
   function literal is a special notation used to simplify how a function is defined.There are two types of function literals in Kotlin:
     - Lambda expression
