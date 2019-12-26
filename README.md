@@ -93,6 +93,25 @@
        list.any(::isEven)
        list.filter(::isEven)
      ```  
+    #### Bound vs Non-Bound Reference
+    - Non-Bound reference is  not bound to any specific instance and you can call it on any object of the that class
+    
+      ```kotlin
+      data class Student (val name: String, percentage: Int){
+          fun average (percentageLimit: Int) = percentage > percentageLimit
+      }
+
+      val avgPredicate: (Studen,Int) -> Boolean = Student::average
+
+      val john = Student("John, Ray",80)
+      avgPredicate(john,40)
+
+      //If we look under the hood and check what Lambda does correspond to this member reference, we will find that this Lambda takes two 
+      arguments,
+      //student and avgPercentage limit,it simply calls the member function is older inside on the past personnel element
+      //val avgPredicate: (Studen,Int) -> Boolean = { student,perLimit -> student.average(perLimit)
+
+      ```
   #### Function literal
   function literal is a special notation used to simplify how a function is defined.There are two types of function literals in Kotlin:
     - Lambda expression
