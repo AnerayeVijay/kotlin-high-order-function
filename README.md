@@ -56,10 +56,33 @@
           list.any(isEven) //return true
           list.filter(isEven) // returns 2,4,6,8,10
           ```
-- We can also use them to type local variables, properties or arguments:
-    - ```val greet: ()->Unit```
-    - ```val square: (Int)->Int```
-    - ```val producePrinter: ()->()->Unit```
+   #### Calling Member reference in Function 
+    - The syntax for member reference is the same as in Java
+    - In Kotlin you can store Lambda in a variable, however, you can't store a function in a variable. It's not like in a truly functional
+      language where each function is a variable.
+    - In Kotlin there is a clear distinction between functions and variables,
+      ```kotlin
+       fun isOdd (a:Int) : Boolean = a % 2 != 0
+       // You can't store function in variable
+       val predicates = add // Compile error
+      ```
+    - To solve this issue use Functional reference instead
+    - Function references allow you to store a reference to any defined function in a variable to be able to store it and qualitative it
+      ```kotlin
+       fun isOdd (a:Int) : Boolean = a % 2 != 0
+       val predicates = ::add  // No Compilation error
+      ```
+     - Member references allow you to hide all the parameters, because the compiler infers the types for you.
+     - If a reproach member is a property, or it's a function that takes zero or one argument, then member reference syntax looks like
+         ```kotlin
+            val action = { person: Person, message: String -> sendNotificaiont(person,message)}
+
+            val action = ::sendNotification
+        ``` 
+     - We can also use them to type local variables, properties or arguments:
+      - ```val greet: ()->Unit```
+      - ```val square: (Int)->Int```
+      - ```val producePrinter: ()->()->Unit```
   #### Function literal
   function literal is a special notation used to simplify how a function is defined.There are two types of function literals in Kotlin:
     - Lambda expression
