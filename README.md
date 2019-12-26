@@ -112,6 +112,24 @@
       //val avgPredicate: (Studen,Int) -> Boolean = { student,perLimit -> student.average(perLimit)
 
       ```
+     - Bound reference is a member reference that is attached to a specific instance of the class
+    
+        ```kotlin
+        data class Student (val name: String, percentage: Int){
+            fun average (percentageLimit: Int) = percentage > percentageLimit
+        }
+        val john = Student("John, Ray",80)
+
+        val avgPredicate: (Int) -> Boolean = john::average
+        avgPredicate(45)
+        ```   
+     - Member reference can be bound to this reference.Here, we'll return a predicate directly from the class student.
+        ```kotlin
+        data class Student (val name: String, percentage: Int){
+            fun average (percentageLimit: Int) = percentage > percentageLimit
+            fun getAvgPredicate() = ::average
+        }
+        ```
   #### Function literal
   function literal is a special notation used to simplify how a function is defined.There are two types of function literals in Kotlin:
     - Lambda expression
