@@ -79,10 +79,20 @@
 
             val action = ::sendNotification
         ``` 
+    - If the reproached function takes several arguments,you have to repeat all the parameter names as Lambda parameters, and then 
+      explicitly pass them through,that makes this syntax robust
+      
      - We can also use them to type local variables, properties or arguments:
       - ```val greet: ()->Unit```
       - ```val square: (Int)->Int```
       - ```val producePrinter: ()->()->Unit```
+    ##### Passing function reference as argument
+     ```kotlin
+       fun isEven (i: Int) : Boolan = { i%2 == 0 }
+       val list = listOf(1,2,3,4,5,6,7)
+       list.any(::isEven)
+       list.filter(::isEven)
+     ```  
   #### Function literal
   function literal is a special notation used to simplify how a function is defined.There are two types of function literals in Kotlin:
     - Lambda expression
